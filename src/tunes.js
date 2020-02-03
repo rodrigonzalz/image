@@ -66,6 +66,7 @@ export default class Tunes {
     this.buttons = [];
 
     const tunes = Tunes.tunes.concat(this.actions);
+
     tunes.forEach((tune) => {
       let el = make('div', [this.CSS.buttonBase, this.CSS.button], {
         innerHTML: tune.icon,
@@ -94,11 +95,11 @@ export default class Tunes {
    */
   tuneClicked(tuneName, customFunction) {
     if (typeof customFunction === 'function') {
-        if (!customFunction(tuneName)) {
-            return false;
-        }
+      if (!customFunction(tuneName)) {
+        return false;
+      }
     }
-    
+
     let button = this.buttons.find(el => el.dataset.tune === tuneName);
 
     button.classList.toggle(this.CSS.buttonActive, !button.classList.contains(this.CSS.buttonActive));
