@@ -207,9 +207,9 @@ export default class ImageTool {
       /**
        * Paste URL of image into the Editor
        */
-      patterns: {
+      /* patterns: {
         image: /https?:\/\/\S+\.(gif|jpe?g|tiff|png)$/i
-      },
+      },*/
 
       /**
        * Drag n drop file from into the Editor
@@ -240,14 +240,14 @@ export default class ImageTool {
           break;
         }
 
-        this.uploadUrl(image.src);
+        // this.uploadUrl(image.src);
         break;
 
-      case 'pattern':
+        /* case 'pattern':
         const url = event.detail.data;
 
         this.uploadUrl(url);
-        break;
+        break;*/
 
       case 'file':
         const file = event.detail.file;
